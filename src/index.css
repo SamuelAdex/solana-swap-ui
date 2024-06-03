@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: ease-in-out .2s;
+  scroll-behavior: smooth;
+}
+
+body{
+ background-color: rgba(0,3,85,1); 
+}
+
+@font-face {
+  font-family: Digits;
+  src: url("./assets/fonts/digital-7.ttf");
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-digit{
+  font-family: Digits;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(-0px);
+    transform: translateX(-0px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(-0px);
+    transform: translateX(-0px);
+  }
+}
+
+.btn{
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-icon{
+  transition: .3s ease-in-out;
+}
+
+.btn:hover .btn-icon{
+  border-radius: 100%;
+  background-color: #000AFF;
+}
+
+.btn::before{
+  content: "";
+  padding: 12px;
+  background: #000355;
+  position: absolute;
+  bottom: -30px;
+  border-radius: 100%;
+  transition: ease-in-out .4s;
+}
+.btn:hover::before{
+  transform: scale(2000%);
+}
