@@ -13,7 +13,7 @@ const Hero = () => {
 
 
     useEffect(() => {
-      const target = new Date("12/15/2023 18:59:59");
+      const target = new Date("06/15/2024 18:59:59");
   
       const interval = setInterval(() => {
         const now = new Date();
@@ -33,9 +33,9 @@ const Hero = () => {
         const s = Math.floor((difference % (1000 * 60)) / 1000);
         setSeconds(s);
   
-        if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
-            setLaunchTime(true);
-        }
+        // if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
+        //     setLaunchTime(true);
+        // }
       }, 1000);
   
       return () => clearInterval(interval);
@@ -50,19 +50,19 @@ const Hero = () => {
                 <img src={PresaleImg} alt="" />
                 <section className='flex items-center justify-evenly p-2 bg-[#000355] border-[3px] border-[#000AFF] rounded-[32px] pt-1 pb-3 justify-center w-[386px]'>
                     <div className='flex flex-col'>
-                        <span className='text-[48px] text-[#EDF9D0] font-digit'>20</span>
+                        <span className='text-[48px] text-[#EDF9D0] font-digit'>{days}</span>
                         <span className='text-[#A2A2A2] mt-[-13px] text-[12px]'>Days</span>
                     </div>
                     <div className='flex flex-col'>
-                        <span className='text-[48px] text-[#EDF9D0] font-digit'>24</span>
+                        <span className='text-[48px] text-[#EDF9D0] font-digit'>{hours}</span>
                         <span className='text-[#A2A2A2] mt-[-13px] text-[12px]'>Hours</span>
                     </div>
                     <div className='flex flex-col'>
-                        <span className='text-[48px] text-[#EDF9D0] font-digit'>40</span>
+                        <span className='text-[48px] text-[#EDF9D0] font-digit'>{minutes}</span>
                         <span className='text-[#A2A2A2] mt-[-13px] text-[12px]'>Minutes</span>
                     </div>
                     <div className='flex flex-col'>
-                        <span className='text-[48px] text-[#EDF9D0] font-digit'>5</span>
+                        <span className='text-[48px] text-[#EDF9D0] font-digit'>{seconds}</span>
                         <span className='text-[#A2A2A2] mt-[-13px] text-[12px]'>Seconds</span>
                     </div>
                 </section>
