@@ -45,8 +45,8 @@ const Hero = () => {
     <section className='flex flex-col items-center pt-10 text-center'>
         <section className="flex flex-col gap-4 items-center text-center">
             <img src={SolanaTextImg} alt="" />
-            <p className='text-white text-[16px] font-medium w-[490px]'>SolanaSwap is a decentralized application that facilitates the swapping of tokens on Solana blockchain.</p>
-            <section className='flex items-center gap-16 mt-5'>
+            <p className='text-white text-[16px] font-medium md:w-[490px]'>SolanaSwap is a decentralized application that facilitates the swapping of tokens on Solana blockchain.</p>
+            <section className='flex md:flex-row flex-col items-center md:gap-16 gap-8 mt-5'>
                 <img src={PresaleImg} alt="" />
                 <section className='flex items-center justify-evenly p-2 bg-[#000355] border-[3px] border-[#000AFF] rounded-[32px] pt-1 pb-3 justify-center w-[386px]'>
                     <div className='flex flex-col'>
