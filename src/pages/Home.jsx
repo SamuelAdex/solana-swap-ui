@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <section className='main-section h-[90vh] bg-[rgba(0,3,85,1)]'>
+      <section className='main-section h-[90vh]'>
         <Hero />
         <SwapSection />
       </section>

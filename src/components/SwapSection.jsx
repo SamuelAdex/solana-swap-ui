@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 import {MdOutlineVisibilityOff, MdOutlineVisibility, MdKeyboardArrowDown } from 'react-icons/md'
 import Button from './Button';
+import { LuEye } from "react-icons/lu";
+import { LuEyeOff } from "react-icons/lu";
 
 import ConnectIcon from '../assets/connect.svg'
 import ArrowImg from '../assets/arrow-transfer.svg'
@@ -12,15 +14,16 @@ import SolIcon from '../assets/Sollet.png'
 import BitcoinIcon from '../assets/bitcoin.png'
 
 const SwapSection = () => {
+    const [hideAmount, setHideAmount] = useState(false)
   return (
-    <section className='flex w-[70%] m-auto m-[0px] gap-4 mt-8 py-4'>
+    <section className='flex w-[80%] m-auto m-[0px] gap-4 mt-8 py-4'>
         <aside className='flex-[2.5] inline-block border-[1px] border-[rgba(81,81,81,1)] p-[25px] rounded-[32px] bg-[rgba(0,2,51,0.5)]'>
             <div className='flex items-center gap-2 text-white text-[12px]'>
                 <span>Wallet balance</span>
-                <MdOutlineVisibility fontSize={"1rem"} />
+                {hideAmount == true ? <LuEyeOff fontSize={"1rem"} onClick={()=> setHideAmount(false)} className="cursor-pointer" /> : <LuEye fontSize={"1rem"} onClick={()=> setHideAmount(true)} className="cursor-pointer" />}
             </div>
             <div className='text-white mt-5 text-[40px]'>
-                <span>$000,000,000</span>
+                {hideAmount == true ? <span>$000,000,000</span>  : <span>$***,***,***</span>}                
             </div>
             <div className='mt-5'>    
                 <span className='rounded-xl text-[13px] border-[1px] border-white text-white'>

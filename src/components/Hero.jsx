@@ -42,8 +42,8 @@ const Hero = () => {
     }, []);
 
   return (
-    <section className='flex flex-col items-center text-center'>
-        <section className="flex flex-col gap-6 items-center text-center">
+    <section className='flex flex-col items-center pt-10 text-center'>
+        <section className="flex flex-col gap-4 items-center text-center">
             <img src={SolanaTextImg} alt="" />
             <p className='text-white text-[16px] font-medium w-[490px]'>SolanaSwap is a decentralized application that facilitates the swapping of tokens on Solana blockchain.</p>
             <section className='flex items-center gap-16 mt-5'>
